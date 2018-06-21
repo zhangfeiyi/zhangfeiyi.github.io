@@ -1,7 +1,12 @@
+---
+layout: post
+title:  "JavaScript 语言精粹笔记1-语法、对象、函数"
+categories: JavaScript
+tags:  对象 函数 this 闭包 面向对象 作用域
+---
+
+
 设置cookie
-
-
-
 每个cookie都是一个名/值对，可以把下面这样一个字符串赋值给document.cookie：
 
 document.cookie="userId=828";
