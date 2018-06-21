@@ -1,0 +1,52 @@
+ 在js中，想要引用activex控件，就不得不先说说引入js文件标签中的属性for ,event 用法：
+
+<scriptlanguage= "javascript " for= "window " event= "onload">
+
+EVENT   event   设置或获取脚本编写用于的事件  
+
+FOR   htmlFor   设置或获取绑定到事件脚本的对象。
+
+可以这样理解。
+
+<script   language="javascript "   for= "window "   event= "onload ">
+
+相当于
+
+<script   language="javascript ">
+
+//   绑定
+
+window.attachEvent( "onload ",function()   {
+
+//   TODO
+
+})
+
+</script>
+
+ 
+
+FOR后面跟的是一个控件的ID，比如<object id="window"><object>这可能是一个组件。
+
+
+
+而在做电话拨号系统时，得到了验证：
+
+引用activex组件：
+
+<OBJECTID="Phonic_usb" WIDTH="" HEIGHT=""CLASSID="CLSID:BB4780D9-391E-41B5-B366-434ADCFD7D10"></OBJECT>
+
+ 
+
+引入PlugIn事件：
+
+   <SCRIPT  LANGUAGE="javascript" type = "text/javascript" FOR="Phonic_usb"   EVENT=PlugIn(uboxHandle)  > 
+
+// 触发该事件时执行的代码
+
+  </SCRIPT>
+
+ 
+
+备注：因为ActiveX是微软的专有技术，IE当然可以顺利的加载，但FireFox等浏览器需要安装插件。
+
